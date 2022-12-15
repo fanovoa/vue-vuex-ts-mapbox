@@ -20,9 +20,10 @@ export const usePlacesStore =() => {
         userLocation: computed( () => store.state.places.userLocation ),
 
         //Getters
-        isUserlocationReady: computed<boolean>( () => store.getters['places/isUserlocationReady'])
+        isUserlocationReady: computed<boolean>( () => store.getters['places/isUserlocationReady']),
 
         //Actions
+        searchPlacesByTerm: (query = '') => store.dispatch('places/searchPlacesByTerm',query),
 
         //Mutations
 
