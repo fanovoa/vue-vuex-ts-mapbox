@@ -1,10 +1,16 @@
+import { usePlacesStore } from '@/composables';
 import { defineComponent } from 'vue'
 export default defineComponent({
 name:'SearchResults',
 setup(){
 
- return{
+    const { isLoadingPlaces, places, userLocation } =usePlacesStore();
 
+
+ return{
+    isLoadingPlaces,
+    places,
+    userLocation
  }
 }
 });
