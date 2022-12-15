@@ -1,8 +1,6 @@
 ## Aplicacion
 Esto es una aplicación de mapas utilizando mapbox con vue-vuex y typeScript ,  busca ubicaciones , calcula distancia entre distintos puntos.
 
-# maps-app
-
 ## Project setup
 ```
 npm install
