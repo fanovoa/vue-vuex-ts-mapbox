@@ -1,3 +1,4 @@
+import { Feature } from "@/interfaces/places";
 import { StateInterface } from "@/store";
 import Mapboxgl from "mapbox-gl";
 import { computed } from "vue";
@@ -18,8 +19,9 @@ export const useMapStore  = () => {
         //Getters
         isMapReady: computed<boolean>(() => store.getters['map/isMapReady']),
 
-        //Mutations
+        //Mutations(
         setMap: (map:Mapboxgl.Map) => store.commit('map/setMap', map),
+        setPlaceMarkers: (places:Feature[]) => store.commit('map/setPlaceMarkers',places),
 
         //Actions
     }
